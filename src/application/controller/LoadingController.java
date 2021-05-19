@@ -23,7 +23,7 @@ public class LoadingController implements Initializable {
         transition.setByAngle(360 * 3);
         transition.play();
 
-        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(4), e -> ZombieDice.getInstance().setLayout(ScreenLayout.HOME)));
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(4), e -> ZombieDice.getInstance().setLayout(ScreenLayout.PLAYER_COUNT)));
         timeline.play();
     }
 }
