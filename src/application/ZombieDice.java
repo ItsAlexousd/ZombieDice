@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
@@ -42,6 +43,7 @@ public class ZombieDice extends Application {
         primaryStage.setY((bounds.getHeight() - HEIGHT) / 2);
 
         primaryStage.setTitle("Zombie Dice");
+        primaryStage.getIcons().add(new Image("img/icon.png"));
         primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root, WIDTH, HEIGHT));
         primaryStage.show();
