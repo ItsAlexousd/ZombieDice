@@ -1,6 +1,7 @@
 package application.screen;
 
 public enum ScreenLayout {
+    LOADING("loading"),
     HOME("home");
 
     private String fileName;

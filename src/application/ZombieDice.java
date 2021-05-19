@@ -28,10 +28,10 @@ public class ZombieDice extends Application {
     public void start(Stage primaryStage) throws Exception{
         stage = primaryStage;
 
-        URL url = getClass().getResource(ScreenLayout.HOME.getPath());
+        URL url = getClass().getResource(ScreenLayout.LOADING.getPath());
 
         if(url == null){
-            throw new NullPointerException("Home file is null");
+            throw new NullPointerException("Loading file is null");
         }
 
         Parent root = FXMLLoader.load(url);
