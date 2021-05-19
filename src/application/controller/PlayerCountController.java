@@ -1,25 +1,47 @@
 package application.controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
-public class PlayerCountController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class PlayerCountController implements Initializable {
+    private static final int MIN_PLAYERS = 2;
+    private static final int MAX_PLAYERS = 10;
+
+    private int count;
+
     @FXML
     private Label playerCount;
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        count = MIN_PLAYERS;
+        setText(count);
+    }
+
+    @FXML
     public void increment(){
-        playerCount.setText(Integer.toString(getCount() + 1));
-    }
-
-    public void decrement(){
-        playerCount.setText(Integer.toString(getCount() - 1));
-    }
-
-    private int getCount(){
-        try {
-            return Integer.parseInt(playerCount.getText());
-        } catch(NumberFormatException ignored){
-            return 2;
+        if(count < MAX_PLAYERS){
+            setText(++count);
         }
+    }
+
+    @FXML
+    public void decrement(){
+        if(count > MIN_PLAYERS){
+            setText(--count);
+        }
+    }
+
+    @FXML
+    public void next(){
+
+    }
+
+    private void setText(int count){
+        playerCount.setText(Integer.toString(count));
     }
 }

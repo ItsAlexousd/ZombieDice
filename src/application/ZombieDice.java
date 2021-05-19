@@ -1,6 +1,6 @@
 package application;
 
-import application.screen.ScreenLayout;
+import application.view.ScreenLayout;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 
 public class ZombieDice extends Application {
     private static final int WIDTH = 1000;
@@ -29,13 +30,11 @@ public class ZombieDice extends Application {
     public void start(Stage primaryStage) throws Exception{
         stage = primaryStage;
 
-        URL url = getClass().getResource(ScreenLayout.LOADING.getPath());
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(ScreenLayout.LOADING.getPath()), "Loading URL must not be null"));
 
-        if(url == null){
-            throw new NullPointerException("Loading file is null");
-        }
-
-        Parent root = FXMLLoader.load(url);
+        Scene scene = new Scene(root, WIDTH, HEIGHT);
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("view/style.css"), "Style CSS must not be null").toExternalForm());
+        primaryStage.setScene(scene);
 
         // Center the window on the screen
         Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
@@ -45,7 +44,6 @@ public class ZombieDice extends Application {
         primaryStage.setTitle("Zombie Dice");
         primaryStage.getIcons().add(new Image("img/icon.png"));
         primaryStage.setResizable(false);
-        primaryStage.setScene(new Scene(root, WIDTH, HEIGHT));
         primaryStage.show();
     }
 

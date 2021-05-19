@@ -1,4 +1,4 @@
-package application.screen;
+package application.view;
 
 public enum ScreenLayout {
     LOADING("loading"),
@@ -12,6 +12,6 @@ public enum ScreenLayout {
     }
 
     public String getPath() {
-        return "screen/" + fileName + ".fxml";
+        return "view/" + fileName + ".fxml";
     }
 }

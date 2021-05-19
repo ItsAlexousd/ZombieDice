@@ -1,7 +1,7 @@
 package application.controller;
 
 import application.ZombieDice;
-import application.screen.ScreenLayout;
+import application.view.ScreenLayout;
 import javafx.animation.KeyFrame;
 import javafx.animation.RotateTransition;
 import javafx.animation.Timeline;
