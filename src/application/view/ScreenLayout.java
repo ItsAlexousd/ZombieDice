@@ -3,7 +3,9 @@ package application.view;
 public enum ScreenLayout {
     LOADING("loading"),
     HOME("home"),
-    PLAYER_COUNT("playercount");
+    PLAYER_COUNT("playercount"),
+    PLAYER_NAME("playername"),
+    DIFFICULTY("difficulty");
 
     private String fileName;
 

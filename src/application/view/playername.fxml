@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!-- fx:controller="application.controller.PlayerNameController" -->
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #36385c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PlayerNameController">
+   <children>
+      <Label fx:id="text" alignment="CENTER" contentDisplay="CENTER" layoutX="273.0" layoutY="230.0" prefHeight="49.0" prefWidth="455.0" text="Saisir le nom de Joueur 1 :" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Agency FB Bold" size="40.0" />
+         </font>
+      </Label>
+      <Button layoutX="374.0" layoutY="414.0" mnemonicParsing="false" onMouseClicked="#confirm" prefHeight="0.0" prefWidth="253.0" stylesheets="@style.css" text="Valider" textFill="WHITE">
+         <font>
+            <Font name="Agency FB Bold" size="30.0" />
+         </font>
+      </Button>
+      <TextField fx:id="field" layoutX="390.0" layoutY="321.0" prefHeight="39.0" prefWidth="222.0" promptText="Zombie">
+         <font>
+            <Font name="Agency FB Bold" size="25.0" />
+         </font></TextField>
+   </children>
+</Pane>

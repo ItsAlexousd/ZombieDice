@@ -1,5 +1,6 @@
 package application;
 
+import application.controller.Game;
 import application.view.ScreenLayout;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -22,8 +23,11 @@ public class ZombieDice extends Application {
     private static ZombieDice instance;
     private Stage stage;
 
+    private final Game game;
+
     public ZombieDice(){
         instance = this;
+        game = new Game();
     }
 
     @Override
@@ -62,6 +66,10 @@ public class ZombieDice extends Application {
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public Game getGame() {
+        return game;
     }
 
     public static ZombieDice getInstance() {
