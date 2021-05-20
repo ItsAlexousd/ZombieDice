@@ -2,6 +2,7 @@ package application.controller.settings;
 
 import application.ZombieDice;
 import application.controller.Game;
+import application.view.ScreenLayout;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -26,5 +27,10 @@ public class PlayController implements Initializable {
     @FXML
     public void play(){
         Platform.exit();
+    }
+
+    @FXML
+    public void back(){
+        ZombieDice.getInstance().setLayout(ScreenLayout.PLAYER_COUNT);
     }
 }

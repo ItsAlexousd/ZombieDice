@@ -9,17 +9,17 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #36385c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.settings.PlayController">
    <children>
-      <Label fx:id="text" alignment="CENTER" contentDisplay="CENTER" layoutX="280.0" layoutY="222.0" prefHeight="49.0" prefWidth="455.0" text="Vous êtes prêt à démarrer" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="text" alignment="CENTER" contentDisplay="CENTER" layoutX="273.0" layoutY="176.0" prefHeight="49.0" prefWidth="455.0" text="Vous êtes prêt à démarrer" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Agency FB Bold" size="40.0" />
          </font>
       </Label>
-      <Button layoutX="374.0" layoutY="442.0" mnemonicParsing="false" onMouseClicked="#play" prefHeight="0.0" prefWidth="253.0" stylesheets="@style.css" text="Jouer" textFill="WHITE">
+      <Button layoutX="367.0" layoutY="396.0" mnemonicParsing="false" onMouseClicked="#play" prefHeight="0.0" prefWidth="253.0" stylesheets="@style.css" text="Jouer" textFill="WHITE">
          <font>
             <Font name="Agency FB Bold" size="30.0" />
          </font>
       </Button>
-      <Label fx:id="playerCount" alignment="CENTER" contentDisplay="CENTER" layoutX="424.0" layoutY="293.0" prefHeight="57.0" prefWidth="153.0" text="2 Joueurs" textFill="WHITE">
+      <Label fx:id="playerCount" alignment="CENTER" contentDisplay="CENTER" layoutX="417.0" layoutY="247.0" prefHeight="57.0" prefWidth="153.0" text="2 Joueurs" textFill="WHITE">
          <font>
             <Font name="Agency FB Bold" size="30.0" />
          </font>
@@ -30,7 +30,7 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </Label>
-      <Label fx:id="difficulty" alignment="CENTER" contentDisplay="CENTER" layoutX="371.0" layoutY="350.0" prefHeight="57.0" prefWidth="259.0" text="Difficulté : Facile" textFill="WHITE">
+      <Label fx:id="difficulty" alignment="CENTER" contentDisplay="CENTER" layoutX="364.0" layoutY="304.0" prefHeight="57.0" prefWidth="259.0" text="Difficulté : Facile" textFill="WHITE">
          <font>
             <Font name="Agency FB Bold" size="30.0" />
          </font>
@@ -41,5 +41,10 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </Label>
+      <Button layoutX="367.0" layoutY="468.0" mnemonicParsing="false" onMouseClicked="#back" prefHeight="0.0" prefWidth="253.0" stylesheets="@style.css" text="Retour" textFill="WHITE">
+         <font>
+            <Font name="Agency FB Bold" size="30.0" />
+         </font>
+      </Button>
    </children>
 </Pane>
