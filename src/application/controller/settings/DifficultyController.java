@@ -22,40 +22,57 @@ public class DifficultyController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        difficulty = Difficulty.EASY;
-        easy.setSelected(true);
+        setNewDifficulty(ZombieDice.getInstance().getGame().getDifficulty());
     }
 
     @FXML
     public void easyClick(){
-        uncheck();
-        easy.setSelected(true);
-        difficulty = Difficulty.EASY;
+        setNewDifficulty(Difficulty.EASY);
     }
 
     @FXML
     public void mediumClick(){
-        uncheck();
-        medium.setSelected(true);
-        difficulty = Difficulty.MEDIUM;
+        setNewDifficulty(Difficulty.MEDIUM);
     }
 
     @FXML
     public void hardClick(){
-        uncheck();
-        hard.setSelected(true);
-        difficulty = Difficulty.HARD;
+        setNewDifficulty(Difficulty.HARD);
     }
 
     @FXML
-    public void confirm(){
+    public void next(){
         ZombieDice.getInstance().getGame().setDifficulty(difficulty);
         ZombieDice.getInstance().setLayout(ScreenLayout.PLAY);
     }
 
-    private void uncheck(){
+    @FXML
+    public void back(){
+        ZombieDice.getInstance().setLayout(ScreenLayout.PLAYER_COUNT);
+    }
+
+    private void setNewDifficulty(Difficulty difficulty){
         easy.setSelected(false);
         medium.setSelected(false);
         hard.setSelected(false);
+
+        this.difficulty = difficulty;
+
+        switch(difficulty){
+            case EASY:
+                easy.setSelected(true);
+                break;
+
+            case MEDIUM:
+                medium.setSelected(true);
+                break;
+
+            case HARD:
+                hard.setSelected(true);
+                break;
+
+            default:
+                break;
+        }
     }
 }

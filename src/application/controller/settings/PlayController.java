@@ -31,6 +31,6 @@ public class PlayController implements Initializable {
 
     @FXML
     public void back(){
-        ZombieDice.getInstance().setLayout(ScreenLayout.PLAYER_COUNT);
+        ZombieDice.getInstance().setLayout(ScreenLayout.DIFFICULTY);
     }
 }

@@ -38,14 +38,14 @@ public class PlayerNameController implements Initializable {
 
         field.addEventHandler(KeyEvent.KEY_PRESSED, e -> {
             if(e.getCode() == KeyCode.ENTER) {
-                confirm();
+                next();
                 e.consume();
             }
         });
     }
 
     @FXML
-    public void confirm(){
+    public void next(){
         if(field.getText().isEmpty()){
             return;
         }

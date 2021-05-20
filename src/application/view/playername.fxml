@@ -13,7 +13,7 @@
             <Font name="Agency FB Bold" size="40.0" />
          </font>
       </Label>
-      <Button layoutX="374.0" layoutY="414.0" mnemonicParsing="false" onMouseClicked="#confirm" prefHeight="0.0" prefWidth="253.0" stylesheets="@style.css" text="Valider" textFill="WHITE">
+      <Button layoutX="374.0" layoutY="414.0" mnemonicParsing="false" onMouseClicked="#next" prefHeight="0.0" prefWidth="253.0" stylesheets="@style.css" text="Suivant" textFill="WHITE">
          <font>
             <Font name="Agency FB Bold" size="30.0" />
          </font>
