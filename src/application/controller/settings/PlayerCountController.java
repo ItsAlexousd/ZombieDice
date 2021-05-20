@@ -1,6 +1,7 @@
-package application.controller;
+package application.controller.settings;
 
 import application.ZombieDice;
+import application.controller.Game;
 import application.view.ScreenLayout;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

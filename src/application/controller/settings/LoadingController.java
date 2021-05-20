@@ -1,4 +1,4 @@
-package application.controller;
+package application.controller.settings;
 
 import application.ZombieDice;
 import application.view.ScreenLayout;

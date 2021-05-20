@@ -5,7 +5,8 @@ public enum ScreenLayout {
     HOME("home"),
     PLAYER_COUNT("playercount"),
     PLAYER_NAME("playername"),
-    DIFFICULTY("difficulty");
+    DIFFICULTY("difficulty"),
+    PLAY("play");
 
     private String fileName;
 

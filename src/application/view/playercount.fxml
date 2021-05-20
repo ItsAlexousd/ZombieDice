@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<!-- fx:controller="application.controller.PlayerCountController" -->
+<!-- fx:controller="application.controller.settings.PlayerCountController" -->
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #36385c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PlayerCountController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #36385c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.settings.PlayerCountController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="282.0" layoutY="230.0" text="Combien de joueurs êtes-vous ?" textAlignment="CENTER" textFill="WHITE">
          <font>

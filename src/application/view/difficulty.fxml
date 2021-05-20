@@ -4,9 +4,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<!-- fx:controller="application.controller.DifficultyController" -->
+<!-- fx:controller="application.controller.settings.DifficultyController" -->
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #36385c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.DifficultyController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #36385c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.settings.DifficultyController">
    <children>
       <Label fx:id="text" alignment="CENTER" contentDisplay="CENTER" layoutX="273.0" layoutY="230.0" prefHeight="49.0" prefWidth="455.0" text="Choisissez la difficulté :" textAlignment="CENTER" textFill="WHITE">
          <font>

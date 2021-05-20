@@ -1,8 +1,8 @@
-package application.controller;
+package application.controller.settings;
 
 import application.ZombieDice;
 import application.model.Difficulty;
-import javafx.application.Platform;
+import application.view.ScreenLayout;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
@@ -50,7 +50,7 @@ public class DifficultyController implements Initializable {
     @FXML
     public void confirm(){
         ZombieDice.getInstance().getGame().setDifficulty(difficulty);
-        Platform.exit();
+        ZombieDice.getInstance().setLayout(ScreenLayout.PLAY);
     }
 
     private void uncheck(){

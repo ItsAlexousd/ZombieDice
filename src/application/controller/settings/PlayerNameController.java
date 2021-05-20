@@ -1,4 +1,4 @@
-package application.controller;
+package application.controller.settings;
 
 import application.ZombieDice;
 import application.model.player.Player;
@@ -54,12 +54,6 @@ public class PlayerNameController implements Initializable {
         ZombieDice.getInstance().getGame().getPlayers().add(player);
 
         if(playerId == playerCount){
-            System.out.println("Liste des joueurs :");
-
-            for(Player p : ZombieDice.getInstance().getGame().getPlayers()){
-                System.out.println(" - " + p.getName());
-            }
-
             ZombieDice.getInstance().setLayout(ScreenLayout.DIFFICULTY);
             return;
         }
