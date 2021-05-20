@@ -2,7 +2,7 @@ package application.controller;
 
 import application.ZombieDice;
 import application.model.player.Player;
-import javafx.application.Platform;
+import application.view.ScreenLayout;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -60,10 +60,7 @@ public class PlayerNameController implements Initializable {
                 System.out.println(" - " + p.getName());
             }
 
-            Platform.exit();
-
-            // TODO go to difficulty menu
-            // ZombieDice.getInstance().setLayout(ScreenLayout.DIFFICULTY);
+            ZombieDice.getInstance().setLayout(ScreenLayout.DIFFICULTY);
             return;
         }
 

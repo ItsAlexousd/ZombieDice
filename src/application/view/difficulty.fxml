@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!-- fx:controller="application.controller.DifficultyController" -->
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #36385c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.DifficultyController">
+   <children>
+      <Label fx:id="text" alignment="CENTER" contentDisplay="CENTER" layoutX="273.0" layoutY="230.0" prefHeight="49.0" prefWidth="455.0" text="Choisissez la difficulté :" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Agency FB Bold" size="40.0" />
+         </font>
+      </Label>
+      <Button layoutX="374.0" layoutY="414.0" mnemonicParsing="false" onMouseClicked="#confirm" prefHeight="0.0" prefWidth="253.0" stylesheets="@style.css" text="Valider" textFill="WHITE">
+         <font>
+            <Font name="Agency FB Bold" size="30.0" />
+         </font>
+      </Button>
+      <CheckBox fx:id="easy" layoutX="286.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#easyClick" prefWidth="14.0" />
+      <Label contentDisplay="CENTER" layoutX="315.0" layoutY="324.0" onMouseClicked="#easyClick" text="Facile" textFill="WHITE">
+         <font>
+            <Font name="Agency FB Bold" size="30.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="medium" layoutX="454.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#mediumClick" prefWidth="14.0" />
+      <Label contentDisplay="CENTER" layoutX="483.0" layoutY="324.0" onMouseClicked="#mediumClick" text="Moyen" textFill="WHITE">
+         <font>
+            <Font name="Agency FB Bold" size="30.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="hard" layoutX="627.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#hardClick" prefWidth="14.0" />
+      <Label contentDisplay="CENTER" layoutX="656.0" layoutY="324.0" onMouseClicked="#hardClick" text="Difficile" textFill="WHITE">
+         <font>
+            <Font name="Agency FB Bold" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
