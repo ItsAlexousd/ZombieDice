@@ -2,8 +2,8 @@ package application.controller;
 
 import application.ZombieDice;
 import application.model.Difficulty;
-import application.model.dice.Dice;
-import application.model.dice.DiceColor;
+import application.model.dice.Die;
+import application.model.dice.DieColor;
 import application.model.player.Player;
 import application.view.ScreenLayout;
 
@@ -19,7 +19,7 @@ public class Game {
     private final List<Player> players;
     private int playerCount;
 
-    private List<Dice> cup;
+    private List<Die> cup;
 
     public Game(){
         difficulty = Difficulty.EASY;
@@ -37,27 +37,28 @@ public class Game {
         cup = new ArrayList<>();
 
         for(int i = 0; i < difficulty.getGreenDices(); i++){
-            cup.add(new Dice(DiceColor.GREEN));
+            cup.add(new Die(DieColor.GREEN));
         }
 
         for(int i = 0; i < difficulty.getYellowDices(); i++){
-            cup.add(new Dice(DiceColor.YELLOW));
+            cup.add(new Die(DieColor.YELLOW));
         }
 
         for(int i = 0; i < difficulty.getRedDices(); i++){
-            cup.add(new Dice(DiceColor.RED));
+            cup.add(new Die(DieColor.RED));
         }
     }
 
-    public List<Dice> pickDices(){
-        List<Dice> dices = new ArrayList<>();
+    public List<Die> pickDices(){
+        List<Die> dice = new ArrayList<>();
 
         Collections.shuffle(cup);
-        dices.add(cup.get(0));
-        dices.add(cup.get(1));
-        dices.add(cup.get(2));
 
-        return dices;
+        for(int i = 0; i < 3; i++){
+            dice.add(cup.remove(0));
+        }
+
+        return dice;
     }
 
     public boolean isFinished(){
@@ -76,7 +77,7 @@ public class Game {
         return playerCount;
     }
 
-    public List<Dice> getCup() {
+    public List<Die> getCup() {
         return cup;
     }
 

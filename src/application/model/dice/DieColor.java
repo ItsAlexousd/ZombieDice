@@ -1,6 +1,6 @@
 package application.model.dice;
 
-public enum DiceColor {
+public enum DieColor {
     GREEN("Vert", 3, 2, 1),
     YELLOW("Jaune", 2, 2, 2),
     RED("Rouge", 1, 2, 3);
@@ -10,7 +10,7 @@ public enum DiceColor {
     private final int gunCount;
     private final int printsCount;
 
-    DiceColor(String name, int brainCount, int gunCount, int printsCount) {
+    DieColor(String name, int brainCount, int gunCount, int printsCount) {
         this.name = name;
         this.brainCount = brainCount;
         this.gunCount = gunCount;

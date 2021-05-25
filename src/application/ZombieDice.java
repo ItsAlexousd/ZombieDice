@@ -73,10 +73,6 @@ public class ZombieDice extends Application {
     }
 
     public static ZombieDice getInstance() {
-        if(instance == null) {
-            ZombieDice.launch(ZombieDice.class);
-        }
-
         return instance;
     }
 }

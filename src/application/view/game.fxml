@@ -19,7 +19,7 @@
          <children>
             <HBox alignment="CENTER" spacing="10.0" styleClass="info" stylesheets="@style.css">
                <children>
-                  <Label fx:id="brains" alignment="CENTER" contentDisplay="CENTER" text="0" textFill="WHITE">
+                  <Label fx:id="brainsLabel" alignment="CENTER" contentDisplay="CENTER" text="0" textFill="WHITE">
                      <font>
                         <Font name="Agency FB Bold" size="30.0" />
                      </font>
@@ -42,7 +42,7 @@
             </HBox>
             <HBox alignment="CENTER" spacing="10.0" styleClass="info" stylesheets="@style.css">
                <children>
-                  <Label fx:id="guns" alignment="CENTER" contentDisplay="CENTER" text="0" textFill="WHITE">
+                  <Label fx:id="gunsLabel" alignment="CENTER" contentDisplay="CENTER" text="0" textFill="WHITE">
                      <font>
                         <Font name="Agency FB Bold" size="30.0" />
                      </font>
@@ -65,7 +65,7 @@
             </HBox>
             <HBox alignment="CENTER" spacing="10.0" styleClass="info" stylesheets="@style.css">
                <children>
-                  <Label fx:id="prints" alignment="CENTER" contentDisplay="CENTER" text="0" textFill="WHITE">
+                  <Label fx:id="printsLabel" alignment="CENTER" contentDisplay="CENTER" text="0" textFill="WHITE">
                      <font>
                         <Font name="Agency FB Bold" size="30.0" />
                      </font>
@@ -101,7 +101,7 @@
          <graphic>
             <ImageView fitHeight="40.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../resources/img/dice.png" />
+                  <Image url="@../../resources/img/die.png" />
                </image>
             </ImageView>
          </graphic>

@@ -1,13 +1,13 @@
 package application.model.dice;
 
-public enum DiceFace {
+public enum DieFace {
     BRAIN("Cerveau"),
     GUN("Fusil"),
     PRINTS("Empreintes");
 
     private final String name;
 
-    DiceFace(String name){
+    DieFace(String name){
         this.name = name;
     }
 
