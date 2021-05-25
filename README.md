@@ -39,3 +39,5 @@ Après un lancer, plusieurs options sont possibles :
 - Une fois que 3 nouveaux dés ont été tirés, on est obligé de les lancer (impossible, par exemple, de décider d'arrêter car on vient de tirer 3 dés rouges).
 
 Dès qu'une personne atteint (ou dépasse) 13 cerveaux, on finit le tour en cours afin que tout le monde joue le même nombre de fois. La personne ayant le plus de cerveaux gagne. Si il y a égalité, un tour est refait entre les personnes à départager.
+
+Règles en PDF : http://jeuxstrategie1.free.fr/jeu_zombie_dice/regle.pdf
