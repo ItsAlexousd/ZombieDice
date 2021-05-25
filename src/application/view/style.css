@@ -18,3 +18,8 @@
     -fx-background-color: white;
     -fx-font-size: 20px;
 }
+
+.info {
+    -fx-background-color:  #2d2e47;
+    -fx-background-radius: 25px;
+}

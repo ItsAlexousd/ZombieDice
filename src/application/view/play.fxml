@@ -19,7 +19,7 @@
             <Font name="Agency FB Bold" size="30.0" />
          </font>
       </Button>
-      <Label fx:id="playerCount" alignment="CENTER" contentDisplay="CENTER" layoutX="450.0" layoutY="256.0" text="2 Joueurs" textFill="WHITE">
+      <Label fx:id="playerCount" alignment="CENTER" contentDisplay="CENTER" layoutX="443.0" layoutY="256.0" text="2 Joueurs" textFill="WHITE">
          <font>
             <Font name="Agency FB Bold" size="30.0" />
          </font>
@@ -30,7 +30,7 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
       </Label>
-      <Label fx:id="difficulty" alignment="CENTER" contentDisplay="CENTER" layoutX="418.0" layoutY="303.0" text="Difficulté : Facile" textFill="WHITE">
+      <Label fx:id="difficulty" alignment="CENTER" contentDisplay="CENTER" layoutX="411.0" layoutY="303.0" text="Difficulté : Facile" textFill="WHITE">
          <font>
             <Font name="Agency FB Bold" size="30.0" />
          </font>

@@ -3,7 +3,6 @@ package application.controller.settings;
 import application.ZombieDice;
 import application.controller.Game;
 import application.view.ScreenLayout;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -26,7 +25,7 @@ public class PlayController implements Initializable {
 
     @FXML
     public void play(){
-        Platform.exit();
+        ZombieDice.getInstance().getGame().start();
     }
 
     @FXML

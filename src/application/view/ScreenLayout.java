@@ -2,13 +2,13 @@ package application.view;
 
 public enum ScreenLayout {
     LOADING("loading"),
-    HOME("home"),
     PLAYER_COUNT("playercount"),
     PLAYER_NAME("playername"),
     DIFFICULTY("difficulty"),
-    PLAY("play");
+    PLAY("play"),
+    GAME("game");
 
-    private String fileName;
+    private final String fileName;
 
     ScreenLayout(String fileName){
         this.fileName = fileName;
