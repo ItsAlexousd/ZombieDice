@@ -14,6 +14,8 @@ import java.util.List;
 public class Game {
     public static final int MIN_PLAYERS = 2;
     public static final int MAX_PLAYERS = 10;
+    public static final int DICE_PER_ROLL = 3;
+    public static final int BRAINS_TO_WIN = 13;
 
     private Difficulty difficulty;
     private final List<Player> players;
@@ -49,16 +51,22 @@ public class Game {
         }
     }
 
-    public List<Die> pickDices(){
+    public List<Die> pickDice(int count){
         List<Die> dice = new ArrayList<>();
 
-        Collections.shuffle(cup);
+        if(count <= cup.size()){
+            Collections.shuffle(cup);
 
-        for(int i = 0; i < 3; i++){
-            dice.add(cup.remove(0));
+            for(int i = 0; i < count; i++){
+                dice.add(cup.remove(0));
+            }
         }
 
         return dice;
+    }
+
+    public boolean hasEnoughDice(int count){
+        return cup.size() >= count;
     }
 
     public boolean isFinished(){

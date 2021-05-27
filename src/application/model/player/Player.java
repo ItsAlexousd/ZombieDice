@@ -1,6 +1,6 @@
 package application.model.player;
 
-public class Player {
+public class Player implements Comparable<Player> {
     private final String name;
     private int brains;
 
@@ -18,5 +18,10 @@ public class Player {
 
     public void addBrains(int brains) {
         this.brains += brains;
+    }
+
+    @Override
+    public int compareTo(Player player) {
+        return player.getBrains() - brains;
     }
 }
