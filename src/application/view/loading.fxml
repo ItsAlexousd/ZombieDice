@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
@@ -9,15 +10,22 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #36385c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.settings.LoadingController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="353.0" layoutY="413.0" text="Chargement en cours" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Agency FB Bold" size="40.0" />
-         </font>
-      </Label>
-      <ImageView fx:id="image" fitHeight="136.0" fitWidth="175.0" layoutX="432.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../resources/img/loading.png" />
-         </image>
-      </ImageView>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" spacing="40.0">
+         <children>
+            <ImageView fx:id="image" fitHeight="136.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/img/loading.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Chargement en cours" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="50.0" right="50.0" />
+         </padding>
+      </VBox>
    </children>
 </Pane>

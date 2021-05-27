@@ -59,7 +59,7 @@ public class PlayerNameController implements Initializable {
         }
 
         playerId++;
-        text.setText("Saisir le nom de Joueur " + playerId + " :");
-        field.setText(null);
+        text.setText("Entrez le nom de Joueur " + playerId + " :");
+        field.setText("");
     }
 }
