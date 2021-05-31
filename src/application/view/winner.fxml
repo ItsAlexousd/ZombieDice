@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<!-- fx:controller="application.controller.game.ScoreController" -->
+<!-- fx:controller="application.controller.game.WinnerController" -->
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #36385c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.game.ScoreController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #36385c;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.game.WinnerController">
    <children>
       <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" spacing="50.0">
          <children>
@@ -52,7 +52,7 @@
                         <Font name="Agency FB Bold" size="30.0" />
                      </font>
                   </Button>
-                  <Button disable="true" mnemonicParsing="false" onMouseClicked="#leaderboard" prefHeight="0.0" prefWidth="253.0" stylesheets="@style.css" text="Voir le classement" textFill="WHITE">
+                  <Button mnemonicParsing="false" onMouseClicked="#leaderboard" prefHeight="0.0" prefWidth="253.0" stylesheets="@style.css" text="Voir le classement" textFill="WHITE">
                      <font>
                         <Font name="Agency FB Bold" size="30.0" />
                      </font>

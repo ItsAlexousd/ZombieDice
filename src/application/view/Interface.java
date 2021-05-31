@@ -7,7 +7,8 @@ public enum Interface {
     DIFFICULTY("difficulty"),
     PLAY("play"),
     GAME("game"),
-    SCORE("score");
+    WINNER("winner"),
+    LEADERBOARD("leaderboard");
 
     private final String fileName;
 

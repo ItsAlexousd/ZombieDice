@@ -9,7 +9,7 @@ import javafx.scene.control.Label;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ScoreController implements Initializable {
+public class WinnerController implements Initializable {
     private final ZombieDice instance = ZombieDice.getInstance();
 
     @FXML
@@ -33,7 +33,6 @@ public class ScoreController implements Initializable {
 
     @FXML
     public void leaderboard(){
-        // TODO Leaderboard in json
-        // Not yet implemented
+        instance.setInterface(Interface.LEADERBOARD);
     }
 }

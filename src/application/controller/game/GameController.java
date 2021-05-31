@@ -24,6 +24,8 @@ import java.util.stream.Collectors;
 public class GameController implements Initializable {
     private final Game game = ZombieDice.getInstance().getGame();
 
+    private List<Player> players;
+
     private Player currentPlayer;
     private int index;
     private int newBrains;
@@ -46,6 +48,7 @@ public class GameController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        players = new ArrayList<>(game.getPlayers());
         dice = new HashMap<>();
         nextPlayer();
     }
@@ -111,25 +114,25 @@ public class GameController implements Initializable {
         game.getCup().addAll(dice.keySet());
         dice.clear();
 
-        if(index >= game.getPlayers().size()){
+        if(index >= players.size()){
             index = 0;
 
             if(game.isFinished()){
-                List<Player> players = game.getPlayers().stream().sorted(new BrainsComparator()).collect(Collectors.toList());
-                Player winner = players.get(0);
+                List<Player> sortedPlayers = players.stream().sorted(new BrainsComparator()).collect(Collectors.toList());
+                Player winner = sortedPlayers.get(0);
 
-                players.stream().filter(player -> player.getBrains() < winner.getBrains()).forEach(player -> game.getPlayers().remove(player));
+                sortedPlayers.stream().filter(player -> player.getBrains() < winner.getBrains()).forEach(player -> players.remove(player));
 
-                if(game.getPlayers().size() == 1){
+                if(players.size() == 1){
                     game.setWinner(winner);
-                    ZombieDice.getInstance().setInterface(Interface.SCORE);
+                    ZombieDice.getInstance().setInterface(Interface.WINNER);
                     enableButtons(false, false);
                     return;
                 }
             }
         }
 
-        currentPlayer = game.getPlayers().get(index++);
+        currentPlayer = players.get(index++);
         text.setText("C'est au tour de " + currentPlayer.getName());
         newBrains = 0;
         updateBrains();
