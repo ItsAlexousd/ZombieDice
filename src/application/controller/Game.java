@@ -5,11 +5,12 @@ import application.model.Difficulty;
 import application.model.dice.Die;
 import application.model.dice.DieColor;
 import application.model.player.Player;
-import application.view.ScreenLayout;
+import application.view.Interface;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 public class Game {
     public static final int MIN_PLAYERS = 2;
@@ -23,6 +24,8 @@ public class Game {
 
     private List<Die> cup;
 
+    private Player winner;
+
     public Game(){
         difficulty = Difficulty.EASY;
         players = new ArrayList<>();
@@ -32,7 +35,7 @@ public class Game {
     public void start(){
         fillCup();
 
-        ZombieDice.getInstance().setLayout(ScreenLayout.GAME);
+        ZombieDice.getInstance().setInterface(Interface.GAME);
     }
 
     public void fillCup(){
@@ -70,7 +73,7 @@ public class Game {
     }
 
     public boolean isFinished(){
-        return players.stream().anyMatch(p -> p.getBrains() >= 13);
+        return players.stream().anyMatch(p -> p.getBrains() >= BRAINS_TO_WIN);
     }
 
     public Difficulty getDifficulty() {
@@ -89,11 +92,19 @@ public class Game {
         return cup;
     }
 
+    public Optional<Player> getWinner() {
+        return Optional.ofNullable(winner);
+    }
+
     public void setDifficulty(Difficulty difficulty) {
         this.difficulty = difficulty;
     }
 
     public void setPlayerCount(int playerCount) {
         this.playerCount = playerCount;
+    }
+
+    public void setWinner(Player winner) {
+        this.winner = winner;
     }
 }

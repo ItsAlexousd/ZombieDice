@@ -2,7 +2,7 @@ package application.controller.settings;
 
 import application.ZombieDice;
 import application.controller.Game;
-import application.view.ScreenLayout;
+import application.view.Interface;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -52,7 +52,7 @@ public class PlayerCountController implements Initializable {
     @FXML
     public void next(){
         ZombieDice.getInstance().getGame().setPlayerCount(count);
-        ZombieDice.getInstance().setLayout(ScreenLayout.PLAYER_NAME);
+        ZombieDice.getInstance().setInterface(Interface.PLAYER_NAME);
     }
 
     private void setText(int count){

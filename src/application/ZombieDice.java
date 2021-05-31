@@ -1,7 +1,7 @@
 package application;
 
 import application.controller.Game;
-import application.view.ScreenLayout;
+import application.view.Interface;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +13,6 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.Objects;
 
 public class ZombieDice extends Application {
@@ -25,13 +24,17 @@ public class ZombieDice extends Application {
 
     private Game game;
 
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         instance = this;
         game = new Game();
         stage = primaryStage;
 
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(ScreenLayout.LOADING.getPath()), "Loading URL must not be null"));
+        Parent root = getInterface(Interface.LOADING);
 
         Scene scene = new Scene(root, WIDTH, HEIGHT);
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("view/style.css"), "Style CSS must not be null").toExternalForm());
@@ -48,25 +51,25 @@ public class ZombieDice extends Application {
         primaryStage.show();
     }
 
-    public void setLayout(ScreenLayout screen) {
-        URL url = getClass().getResource(screen.getPath());
-
-        if(url != null){
-            try {
-                stage.getScene().setRoot(FXMLLoader.load(url));
-            } catch (IOException e) {
-                e.printStackTrace();
-                Platform.exit();
-            }
+    public void setInterface(Interface i){
+        try {
+            stage.getScene().setRoot(getInterface(i));
+        } catch (IOException e) {
+            e.printStackTrace();
+            Platform.exit();
         }
     }
 
-    public static void main(String[] args) {
-        launch(args);
+    private Parent getInterface(Interface i) throws IOException {
+        return FXMLLoader.load(Objects.requireNonNull(getClass().getResource(i.getPath()), "Interface URL must not be null"));
     }
 
     public Game getGame() {
         return game;
+    }
+
+    public void newGame(){
+        game = new Game();
     }
 
     public static ZombieDice getInstance() {

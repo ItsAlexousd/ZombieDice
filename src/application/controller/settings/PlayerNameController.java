@@ -2,7 +2,7 @@ package application.controller.settings;
 
 import application.ZombieDice;
 import application.model.player.Player;
-import application.view.ScreenLayout;
+import application.view.Interface;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -15,6 +15,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class PlayerNameController implements Initializable {
+    private final ZombieDice instance = ZombieDice.getInstance();
+
     @FXML
     private Label text;
     @FXML
@@ -26,7 +28,7 @@ public class PlayerNameController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         playerId = 1;
-        playerCount = ZombieDice.getInstance().getGame().getPlayerCount();
+        playerCount = instance.getGame().getPlayerCount();
 
         field.setTextFormatter(new TextFormatter<>(change -> {
             if(change.getControlNewText().matches("[a-zA-Z]*")){
@@ -51,10 +53,10 @@ public class PlayerNameController implements Initializable {
         }
 
         Player player = new Player(field.getText());
-        ZombieDice.getInstance().getGame().getPlayers().add(player);
+        instance.getGame().getPlayers().add(player);
 
         if(playerId == playerCount){
-            ZombieDice.getInstance().setLayout(ScreenLayout.DIFFICULTY);
+            instance.setInterface(Interface.DIFFICULTY);
             return;
         }
 

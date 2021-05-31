@@ -6,6 +6,7 @@ import application.model.dice.Die;
 import application.model.dice.DieFace;
 import application.model.player.BrainsComparator;
 import application.model.player.Player;
+import application.view.Interface;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
@@ -113,15 +114,15 @@ public class GameController implements Initializable {
         if(index >= game.getPlayers().size()){
             index = 0;
 
-            if(game.getPlayers().stream().anyMatch(p -> p.getBrains() >= Game.BRAINS_TO_WIN)){
+            if(game.isFinished()){
                 List<Player> players = game.getPlayers().stream().sorted(new BrainsComparator()).collect(Collectors.toList());
                 Player winner = players.get(0);
 
                 players.stream().filter(player -> player.getBrains() < winner.getBrains()).forEach(player -> game.getPlayers().remove(player));
 
                 if(game.getPlayers().size() == 1){
-                    // TODO remove
-                    System.out.println(winner.getName() + " a gagné avec " + winner.getBrains() + " cerveaux !");
+                    game.setWinner(winner);
+                    ZombieDice.getInstance().setInterface(Interface.SCORE);
                     enableButtons(false, false);
                     return;
                 }

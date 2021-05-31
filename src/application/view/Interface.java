@@ -1,16 +1,17 @@
 package application.view;
 
-public enum ScreenLayout {
+public enum Interface {
     LOADING("loading"),
     PLAYER_COUNT("playercount"),
     PLAYER_NAME("playername"),
     DIFFICULTY("difficulty"),
     PLAY("play"),
-    GAME("game");
+    GAME("game"),
+    SCORE("score");
 
     private final String fileName;
 
-    ScreenLayout(String fileName){
+    Interface(String fileName){
         this.fileName = fileName;
     }
 
