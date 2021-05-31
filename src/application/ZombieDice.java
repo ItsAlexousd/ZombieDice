@@ -23,15 +23,12 @@ public class ZombieDice extends Application {
     private static ZombieDice instance;
     private Stage stage;
 
-    private final Game game;
-
-    public ZombieDice(){
-        instance = this;
-        game = new Game();
-    }
+    private Game game;
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
+        instance = this;
+        game = new Game();
         stage = primaryStage;
 
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(ScreenLayout.LOADING.getPath()), "Loading URL must not be null"));
@@ -73,6 +70,10 @@ public class ZombieDice extends Application {
     }
 
     public static ZombieDice getInstance() {
+        if(instance == null){
+            launch(ZombieDice.class);
+        }
+
         return instance;
     }
 }

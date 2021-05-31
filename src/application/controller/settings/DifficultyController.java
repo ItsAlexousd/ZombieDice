@@ -5,12 +5,21 @@ import application.model.Difficulty;
 import application.view.ScreenLayout;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.CheckBox;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.Pane;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class DifficultyController implements Initializable {
+    private Difficulty difficulty;
+
+    @FXML
+    private Pane pane;
+
     @FXML
     private CheckBox easy;
     @FXML
@@ -18,11 +27,10 @@ public class DifficultyController implements Initializable {
     @FXML
     private CheckBox hard;
 
-    private Difficulty difficulty;
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         setNewDifficulty(ZombieDice.getInstance().getGame().getDifficulty());
+        addEvents(pane);
     }
 
     @FXML
@@ -74,5 +82,19 @@ public class DifficultyController implements Initializable {
             default:
                 break;
         }
+    }
+
+    private void addEvents(Node node){
+        node.addEventHandler(KeyEvent.KEY_PRESSED, e -> {
+            if(e.getCode() == KeyCode.ENTER){
+                next();
+                e.consume();
+            }
+
+            if(e.getCode() == KeyCode.BACK_SPACE){
+                back();
+                e.consume();
+            }
+        });
     }
 }

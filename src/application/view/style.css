@@ -23,3 +23,21 @@
     -fx-background-color:  #2d2e47;
     -fx-background-radius: 25px;
 }
+
+.check-box:focused {
+    -fx-color: white;
+    -fx-focused-color: black;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-body-color: black;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 2, 2, 1, 1;
+}
+
+.check-box:focused .box {
+    -fx-background-color: white;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius: 3, 4, 2, 1, 1;
+}

@@ -21,10 +21,13 @@
             </Label>
             <StackPane prefHeight="130.0">
                <children>
-                  <TextField fx:id="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="226.0" promptText="Zombie">
+                  <TextField fx:id="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="260.0" promptText="Zombie" style="-fx-text-fill: white;" styleClass="info" stylesheets="@style.css">
                      <font>
                         <Font name="Agency FB Bold" size="25.0" />
                      </font>
+                     <StackPane.margin>
+                        <Insets />
+                     </StackPane.margin>
                   </TextField>
                </children>
             </StackPane>

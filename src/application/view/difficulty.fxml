@@ -7,7 +7,7 @@
 
 <!-- fx:controller="application.controller.settings.DifficultyController" -->
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #36385c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.settings.DifficultyController">
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #36385c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.settings.DifficultyController">
    <children>
       <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" spacing="50.0">
          <padding>
@@ -23,7 +23,7 @@
                <children>
                   <HBox alignment="CENTER" spacing="10.0">
                      <children>
-                        <CheckBox fx:id="easy" mnemonicParsing="false" onMouseClicked="#easyClick" prefWidth="14.0" />
+                        <CheckBox fx:id="easy" mnemonicParsing="false" onMouseClicked="#easyClick" prefWidth="14.0" selected="true" stylesheets="@style.css" />
                         <Label contentDisplay="CENTER" onMouseClicked="#easyClick" text="Facile" textFill="WHITE">
                            <font>
                               <Font name="Agency FB Bold" size="30.0" />
@@ -33,7 +33,7 @@
                   </HBox>
                   <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" spacing="10.0">
                      <children>
-                        <CheckBox fx:id="medium" mnemonicParsing="false" onMouseClicked="#mediumClick" prefWidth="14.0" />
+                        <CheckBox fx:id="medium" mnemonicParsing="false" onMouseClicked="#mediumClick" prefWidth="14.0" stylesheets="@style.css" />
                         <Label contentDisplay="CENTER" onMouseClicked="#mediumClick" text="Moyen" textFill="WHITE">
                            <font>
                               <Font name="Agency FB Bold" size="30.0" />
@@ -43,7 +43,7 @@
                   </HBox>
                   <HBox alignment="CENTER" layoutX="210.0" layoutY="10.0" spacing="10.0">
                      <children>
-                        <CheckBox fx:id="hard" mnemonicParsing="false" onMouseClicked="#hardClick" prefWidth="14.0" />
+                        <CheckBox fx:id="hard" mnemonicParsing="false" onMouseClicked="#hardClick" prefWidth="14.0" stylesheets="@style.css" />
                         <Label contentDisplay="CENTER" onMouseClicked="#hardClick" text="Difficile" textFill="WHITE">
                            <font>
                               <Font name="Agency FB Bold" size="30.0" />

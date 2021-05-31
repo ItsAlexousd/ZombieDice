@@ -8,7 +8,7 @@
 
 <!-- fx:controller="application.controller.settings.PlayerCountController" -->
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #36385c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.settings.PlayerCountController">
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #36385c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.settings.PlayerCountController">
    <children>
       <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" spacing="50.0">
          <padding>
@@ -20,25 +20,29 @@
                   <Font name="Agency FB Bold" size="40.0" />
                </font>
             </Label>
-            <HBox alignment="CENTER" prefHeight="130.0" spacing="15.0">
+            <StackPane prefHeight="130.0">
                <children>
-                  <ImageView fitHeight="24.0" fitWidth="24.0" onMouseClicked="#decrement" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
-                     <image>
-                        <Image url="@../../resources/img/minus.png" />
-                     </image>
-                  </ImageView>
-                  <Label fx:id="playerCount" alignment="CENTER" contentDisplay="CENTER" prefHeight="62.0" prefWidth="70.0" text="2" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font name="Agency FB Bold" size="50.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="24.0" fitWidth="24.0" onMouseClicked="#increment" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
-                     <image>
-                        <Image url="@../../resources/img/plus.png" />
-                     </image>
-                  </ImageView>
+                  <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="200.0" spacing="15.0" styleClass="info" stylesheets="@style.css">
+                     <children>
+                        <ImageView fx:id="minus" fitHeight="24.0" fitWidth="24.0" onMouseClicked="#decrement" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                           <image>
+                              <Image url="@../../resources/img/minus.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="playerCount" alignment="CENTER" contentDisplay="CENTER" prefHeight="62.0" prefWidth="70.0" text="2" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Agency FB Bold" size="50.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="plus" fitHeight="24.0" fitWidth="24.0" onMouseClicked="#increment" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                           <image>
+                              <Image url="@../../resources/img/plus.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
                </children>
-            </HBox>
+            </StackPane>
             <Button mnemonicParsing="false" onMouseClicked="#next" prefHeight="0.0" prefWidth="253.0" stylesheets="@style.css" text="Suivant" textFill="WHITE">
                <font>
                   <Font name="Agency FB Bold" size="30.0" />
