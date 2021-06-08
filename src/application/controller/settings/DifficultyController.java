@@ -67,6 +67,7 @@ public class DifficultyController implements Initializable {
 
     @FXML
     public void back(){
+        instance.getGame().getPlayers().clear();
         instance.setInterface(Interface.PLAYER_COUNT);
     }
 
